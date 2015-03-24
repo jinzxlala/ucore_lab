@@ -304,7 +304,7 @@ print_stackframe(void) {
       */
 	uint32_t ebp = read_ebp();
 	uint32_t eip = read_eip();
-	int i, j;//cannot define in the for loop......
+	int i, j;
 	for(i = 0; ebp != 0 &&i <STACKFRAME_DEPTH; i++){
 		cprintf("ebp:0x%08x eip:0x%08x args:s", ebp, eip);
 		uint32_t* args = (uint32_t *)ebp + 2;
@@ -313,8 +313,8 @@ print_stackframe(void) {
 		}
 		cprintf("\n");
 		print_debuginfo(eip - 1);
-		eip = ((uint32_t *)ebp)[1];//ss:[ebp + 4]
-		ebp = ((uint32_t *)ebp)[0];//ss:[ebp]
+		eip = ((uint32_t *)ebp)[1];
+		ebp = ((uint32_t *)ebp)[0];
 	}
 }
 
