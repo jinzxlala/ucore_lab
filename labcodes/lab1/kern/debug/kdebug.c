@@ -290,6 +290,7 @@ read_eip(void) {
  * */
 void
 print_stackframe(void) {
+	//student ID:2012011365
      /* LAB1 YOUR CODE : STEP 1 */
      /* (1) call read_ebp() to get the value of ebp. the type is (uint32_t);
       * (2) call read_eip() to get the value of eip. the type is (uint32_t);
