@@ -2499,3 +2499,24 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.core.resources 2 10035 2015-03-30 19:52:16.800
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2015-04-10 20:47:25.413 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-04-10 20:48:23.416
+!MESSAGE Indexed 'lab3' (24 sources, 32 headers) in 2.72 sec: 1,647 declarations; 5,764 references; 2 unresolved inclusions; 0 syntax errors; 13 unresolved names (0.18%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-04-10 20:48:43.061
+!MESSAGE Indexed 'lab3_result' (24 sources, 32 headers) in 2.97 sec: 1,664 declarations; 6,052 references; 2 unresolved inclusions; 0 syntax errors; 13 unresolved names (0.17%)
+!SESSION 2015-04-10 21:10:06.708 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-04-10 21:10:09.572
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
