@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="23" version="2.0">
+<workbench progressCount="24" version="2.0">
 <workbenchAdvisor/>
-<window height="876" width="1000" x="278" y="24">
+<window height="874" width="988" x="162" y="26">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -31,53 +31,43 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 <part id="2"/>
+<part id="1"/>
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
-<part id="7"/>
-<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="kdebug.c" partName="kdebug.c" path="/home/moocos/workspace/labcodes/lab4/kern/debug/kdebug.c" title="kdebug.c" tooltip="lab4/kern/debug/kdebug.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/debug/kdebug.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12061" selectionTopPixel="4931"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="trap.c" partName="trap.c" path="/home/moocos/workspace/labcodes/lab5/kern/trap/trap.c" title="trap.c" tooltip="lab5/kern/trap/trap.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/kern/trap/trap.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1845" selectionTopPixel="886"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="trap.c" partName="trap.c" path="/home/moocos/workspace/labcodes/lab4/kern/trap/trap.c" title="trap.c" tooltip="lab4/kern/trap/trap.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/trap/trap.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6358" selectionTopPixel="3328"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="pmm.c" partName="pmm.c" path="/home/moocos/workspace/labcodes/lab5/kern/mm/pmm.c" title="pmm.c" tooltip="lab5/kern/mm/pmm.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/kern/mm/pmm.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="18746" selectionTopPixel="5140"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="default_pmm.c" partName="default_pmm.c" path="/home/moocos/workspace/labcodes/lab4/kern/mm/default_pmm.c" title="default_pmm.c" tooltip="lab4/kern/mm/default_pmm.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/mm/default_pmm.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7479" selectionTopPixel="1776"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="proc.c" partName="proc.c" path="/home/moocos/workspace/labcodes/lab5/kern/process/proc.c" title="proc.c" tooltip="lab5/kern/process/proc.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/kern/process/proc.c"/>
+<editorState selectionHorizontalPixel="74" selectionLength="0" selectionOffset="22275" selectionTopPixel="10457"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="pmm.c" partName="pmm.c" path="/home/moocos/workspace/labcodes/lab4/kern/mm/pmm.c" title="pmm.c" tooltip="lab4/kern/mm/pmm.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/mm/pmm.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15791" selectionTopPixel="10796"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1244"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="vmm.c" partName="vmm.c" path="/home/moocos/workspace/labcodes/lab4/kern/mm/vmm.c" title="vmm.c" tooltip="lab4/kern/mm/vmm.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/mm/vmm.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12249" selectionTopPixel="6519"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="swap_fifo.c" partName="swap_fifo.c" path="/home/moocos/workspace/labcodes/lab5/kern/mm/swap_fifo.c" title="swap_fifo.c" tooltip="lab5/kern/mm/swap_fifo.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/kern/mm/swap_fifo.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3191" selectionTopPixel="643"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="swap.c" partName="swap.c" path="/home/moocos/workspace/labcodes/lab5/kern/mm/swap.c" title="swap.c" tooltip="lab5/kern/mm/swap.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab5/kern/mm/swap.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="982"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="swap_fifo.c" partName="swap_fifo.c" path="/home/moocos/workspace/labcodes/lab4/kern/mm/swap_fifo.c" title="swap_fifo.c" tooltip="lab4/kern/mm/swap_fifo.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/mm/swap_fifo.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4103" selectionTopPixel="324"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="swap.c" partName="swap.c" path="/home/moocos/workspace/labcodes/lab4/kern/mm/swap.c" title="swap.c" tooltip="lab4/kern/mm/swap.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/mm/swap.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4200"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="proc.c" partName="proc.c" path="/home/moocos/workspace/labcodes/lab4/kern/process/proc.c" title="proc.c" tooltip="lab4/kern/process/proc.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4/kern/process/proc.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11865" selectionTopPixel="4923"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="proc.c" partName="proc.c" path="/home/moocos/workspace/labcodes_answer/lab4_result/kern/process/proc.c" title="proc.c" tooltip="lab4_result/kern/process/proc.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab4_result/kern/process/proc.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6309" selectionTopPixel="2306"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="654"/>
 </editor>
 </editors>
 <views>
@@ -448,181 +438,172 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2_result/kern/mm/default_pmm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2/kern/mm/default_pmm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2/kern/mm/memlayout.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2_result/kern/mm/pmm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2/kern/mm/memlayout.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2/kern/mm/pmm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2_result/kern/mm/default_pmm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2_result/libs/list.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2_result/kern/mm/pmm.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2_result/kern/mm/memlayout.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2/libs/defs.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab2/libs/atomic.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/debug/kdebug.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/trap/trap.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/trap/trap.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/mm/default_pmm.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/default_pmm.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/pmm.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/mm/pmm.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/vmm.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/swap_fifo.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/swap.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/mm/swap.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/mm/vmm.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/vmm.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/mm/pmm.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/process/proc.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/process/proc.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4_result/kern/process/proc.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4_result/kern/process/proc.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/lab4_result/kern/process/switch.S"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/lab4_result/kern/process/entry.S"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4_result/kern/process/proc.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/mm/pmm.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/pmm.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab5/kern/mm/swap_fifo.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/lab4/kern/mm/swap_fifo.c"/>
 </editors>
-<item historyLabel="default_pmm.c" index="0">
-<position info="not_deleted" x="4618" y="0"/>
-</item>
-<item historyLabel="default_pmm.c" index="1">
-<position info="not_deleted" x="6062" y="0"/>
-</item>
-<item historyLabel="memlayout.h" index="2">
-<position info="not_deleted" x="4946" y="12"/>
-</item>
-<item historyLabel="default_pmm.c" index="1">
-<position info="not_deleted" x="9275" y="0"/>
+<item historyLabel="pmm.c" index="4">
+<position info="not_deleted" x="14815" y="0"/>
 </item>
 <item historyLabel="pmm.c" index="3">
-<position info="not_deleted" x="15670" y="0"/>
+<position info="not_deleted" x="15345" y="440"/>
 </item>
-<item historyLabel="memlayout.h" index="4">
-<position info="not_deleted" x="4946" y="12"/>
+<item historyLabel="pmm.c" index="4">
+<position info="not_deleted" x="18193" y="0"/>
 </item>
-<item historyLabel="pmm.c" index="5">
-<position info="not_deleted" x="15015" y="0"/>
-</item>
-<item historyLabel="memlayout.h" index="4">
-<position info="not_deleted" x="4946" y="12"/>
-</item>
-<item historyLabel="default_pmm.c" index="6">
-<position info="not_deleted" x="4618" y="0"/>
-</item>
-<item historyLabel="list.h" index="7">
-<position info="not_deleted" x="4302" y="0"/>
-</item>
-<item historyLabel="pmm.h" index="8">
+<item historyLabel="vmm.c" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="memlayout.h" index="9">
-<position info="not_deleted" x="5072" y="3"/>
+<item historyLabel="swap.c" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="defs.h" index="10">
-<position info="not_deleted" x="1653" y="0"/>
+<item historyLabel="trap.c" index="0">
+<position info="not_deleted" x="1713" y="0"/>
 </item>
-<item historyLabel="atomic.h" index="11">
-<position info="not_deleted" x="1046" y="9"/>
+<item historyLabel="vmm.c" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="kdebug.c" index="12">
-<position info="not_deleted" x="12061" y="0"/>
+<item historyLabel="vmm.c" index="8">
+<position info="not_deleted" x="11874" y="1684"/>
 </item>
-<item historyLabel="trap.c" index="13">
-<position info="not_deleted" x="6358" y="0"/>
+<item historyLabel="vmm.c" index="7">
+<position info="not_deleted" x="15379" y="0"/>
 </item>
-<item historyLabel="default_pmm.c" index="14">
-<position info="not_deleted" x="7479" y="0"/>
+<item historyLabel="default_pmm.c" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="pmm.c" index="15">
+<item historyLabel="vmm.c" index="7">
+<position info="not_deleted" x="15379" y="0"/>
+</item>
+<item historyLabel="trap.c" index="0">
+<position info="not_deleted" x="1713" y="0"/>
+</item>
+<item historyLabel="default_pmm.c" index="1">
+<position info="not_deleted" x="6989" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="9">
+<position info="not_deleted" x="17955" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="4957" y="0"/>
+</item>
+<item historyLabel="proc.c" index="11">
+<position info="not_deleted" x="5093" y="121"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="4996" y="0"/>
+</item>
+<item historyLabel="proc.c" index="11">
+<position info="not_deleted" x="5240" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="5528" y="0"/>
+</item>
+<item historyLabel="proc.c" index="11">
+<position info="not_deleted" x="5240" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="5528" y="0"/>
+</item>
+<item historyLabel="proc.c" index="11">
+<position info="not_deleted" x="10465" y="1885"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="5528" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="13942" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="21701" y="0"/>
+</item>
+<item historyLabel="proc.c" index="11">
+<position info="not_deleted" x="10465" y="1885"/>
+</item>
+<item historyLabel="trap.c" index="0">
+<position info="not_deleted" x="1713" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
+<position info="not_deleted" x="17663" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="21880" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
+<position info="not_deleted" x="17663" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
+<position info="not_deleted" x="18956" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
+<position info="not_deleted" x="19004" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
+<position info="not_deleted" x="19051" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
+<position info="not_deleted" x="19371" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
 <position info="not_deleted" x="15791" y="0"/>
 </item>
-<item historyLabel="vmm.c" index="16">
-<position info="not_deleted" x="12249" y="0"/>
+<item historyLabel="trap.c" index="0">
+<position info="not_deleted" x="1845" y="0"/>
 </item>
-<item historyLabel="swap_fifo.c" index="17">
-<position info="not_deleted" x="3330" y="0"/>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="21880" y="0"/>
 </item>
-<item historyLabel="swap.c" index="18">
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="5733" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="5790" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="5788" y="0"/>
+</item>
+<item historyLabel="proc.c" index="10">
+<position info="not_deleted" x="22275" y="0"/>
+</item>
+<item historyLabel="pmm.c" index="12">
+<position info="not_deleted" x="18746" y="0"/>
+</item>
+<item historyLabel="swap_fifo.c" index="14">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="swap_fifo.c" index="17">
-<position info="not_deleted" x="4103" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
+<item historyLabel="swap.c" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="proc.c" index="19">
-<position/>
+<item historyLabel="swap_fifo.c" index="14">
+<position info="not_deleted" x="3192" y="0"/>
 </item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="5193" y="0"/>
-</item>
-<item historyLabel="proc.c" index="20">
+<item historyLabel="swap_fifo.c" index="15">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="5214" y="0"/>
+<item historyLabel="swap_fifo.c" index="14">
+<position info="not_deleted" x="3191" y="0"/>
 </item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11494" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11484" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11650" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11644" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11789" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11783" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11924" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="12027" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="12061" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="12083" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="12130" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="12129" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="12186" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="12334" y="0"/>
-</item>
-<item historyLabel="proc.h" index="21">
-<position info="not_deleted" x="2480" y="0"/>
-</item>
-<item historyLabel="proc.c" index="20">
+<item historyLabel="swap_fifo.c" index="15">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="switch.S" index="22">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="entry.S" index="23">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="proc.c" index="20">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="proc.c" index="19">
-<position info="not_deleted" x="11865" y="0"/>
-</item>
-<item historyLabel="proc.c" index="24">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="proc.c" index="24">
-<position info="not_deleted" x="12477" y="0"/>
-</item>
-<item active="true" historyLabel="proc.c" index="24">
-<position info="not_deleted" x="5980" y="7"/>
+<item active="true" historyLabel="swap_fifo.c" index="14">
+<position info="not_deleted" x="3191" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -642,50 +623,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="proc.c" tooltip="lab4_result/kern/process/proc.c">
-<persistable path="/lab4_result/kern/process/proc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="entry.S" tooltip="lab4_result/kern/process/entry.S">
-<persistable path="/lab4_result/kern/process/entry.S"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="switch.S" tooltip="lab4_result/kern/process/switch.S">
-<persistable path="/lab4_result/kern/process/switch.S"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="proc.h" tooltip="lab4_result/kern/process/proc.h">
-<persistable path="/lab4_result/kern/process/proc.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="proc.c" tooltip="lab4/kern/process/proc.c">
-<persistable path="/lab4/kern/process/proc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="swap.c" tooltip="lab4/kern/mm/swap.c">
-<persistable path="/lab4/kern/mm/swap.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="swap_fifo.c" tooltip="lab4/kern/mm/swap_fifo.c">
 <persistable path="/lab4/kern/mm/swap_fifo.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="vmm.c" tooltip="lab4/kern/mm/vmm.c">
-<persistable path="/lab4/kern/mm/vmm.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="swap.c" tooltip="lab5/kern/mm/swap.c">
+<persistable path="/lab5/kern/mm/swap.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="swap_fifo.c" tooltip="lab5/kern/mm/swap_fifo.c">
+<persistable path="/lab5/kern/mm/swap_fifo.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pmm.c" tooltip="lab4/kern/mm/pmm.c">
 <persistable path="/lab4/kern/mm/pmm.c"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="proc.c" tooltip="lab5/kern/process/proc.c">
+<persistable path="/lab5/kern/process/proc.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="pmm.c" tooltip="lab5/kern/mm/pmm.c">
+<persistable path="/lab5/kern/mm/pmm.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="proc.c" tooltip="lab4/kern/process/proc.c">
+<persistable path="/lab4/kern/process/proc.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="default_pmm.c" tooltip="lab5/kern/mm/default_pmm.c">
+<persistable path="/lab5/kern/mm/default_pmm.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="default_pmm.c" tooltip="lab4/kern/mm/default_pmm.c">
 <persistable path="/lab4/kern/mm/default_pmm.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="vmm.c" tooltip="lab4/kern/mm/vmm.c">
+<persistable path="/lab4/kern/mm/vmm.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="vmm.c" tooltip="lab5/kern/mm/vmm.c">
+<persistable path="/lab5/kern/mm/vmm.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="trap.c" tooltip="lab4/kern/trap/trap.c">
 <persistable path="/lab4/kern/trap/trap.c"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="trap.c" tooltip="lab5/kern/trap/trap.c">
+<persistable path="/lab5/kern/trap/trap.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="kdebug.c" tooltip="lab4/kern/debug/kdebug.c">
 <persistable path="/lab4/kern/debug/kdebug.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="atomic.h" tooltip="lab2/libs/atomic.h">
-<persistable path="/lab2/libs/atomic.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="defs.h" tooltip="lab2/libs/defs.h">
-<persistable path="/lab2/libs/defs.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="memlayout.h" tooltip="lab2_result/kern/mm/memlayout.h">
-<persistable path="/lab2_result/kern/mm/memlayout.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="kdebug.c" tooltip="lab5/kern/debug/kdebug.c">
+<persistable path="/lab5/kern/debug/kdebug.c"/>
 </file>
 </mruList>
 </workbench>

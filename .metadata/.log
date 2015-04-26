@@ -2584,3 +2584,15 @@ org.eclipse.core.internal.resources.ResourceException: The project description f
 
 !ENTRY org.eclipse.cdt.core 1 0 2015-04-23 15:43:24.922
 !MESSAGE Indexed 'lab4_result' (29 sources, 36 headers) in 3.15 sec: 2,064 declarations; 8,086 references; 2 unresolved inclusions; 0 syntax errors; 13 unresolved names (0.13%)
+!SESSION 2015-04-26 17:47:28.455 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-04-26 17:50:14.489
+!MESSAGE Indexed 'lab5' (49 sources, 39 headers) in 4.03 sec: 2,352 declarations; 8,612 references; 2 unresolved inclusions; 0 syntax errors; 13 unresolved names (0.12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-04-26 17:50:50.653
+!MESSAGE Indexed 'lab5_result' (50 sources, 40 headers) in 3.61 sec: 2,553 declarations; 10,272 references; 2 unresolved inclusions; 0 syntax errors; 13 unresolved names (0.10%)
