@@ -96,12 +96,13 @@ default_alloc_pages(size_t n) {
         }
     }
     if (page != NULL) {
-        list_del(&(page->page_link));
         if (page->property > n) {
             struct Page *p = page + n;
             p->property = page->property - n;
-            list_add(&free_list, &(p->page_link));
-    }
+            list_add(le, &(p->page_link));
+            SetPageProperty(p);
+        }
+        list_del(&(page->page_link));
         nr_free -= n;
         ClearPageProperty(page);
     }
@@ -119,24 +120,43 @@ default_free_pages(struct Page *base, size_t n) {
     }
     base->property = n;
     SetPageProperty(base);
-    list_entry_t *le = list_next(&free_list);
-    while (le != &free_list) {
-        p = le2page(le, page_link);
-        le = list_next(le);
-        if (base + base->property == p) {
-            base->property += p->property;
-            ClearPageProperty(p);
-            list_del(&(p->page_link));
-        }
-        else if (p + p->property == base) {
-            p->property += base->property;
-            ClearPageProperty(base);
-            base = p;
-            list_del(&(p->page_link));
-        }
+    list_entry_t *le = &free_list;
+    while(1){
+    	le = list_next(le);
+    	p = le2page(le, page_link);
+    	if(le == &free_list || p > base){
+    		list_add_before(&(p->page_link), &(base->page_link));
+    		break;
+    	}
+    }
+    //cprintf("Now let's merge\n");
+    int re = 1;
+    while(re == 1){
+    	re = 0;
+    	p = le2page((base->page_link.next), page_link);
+    	//cprintf("base = %08x p = %08x, size = %d\n", base, p, base->property);
+    	//cprintf("next = %08x\n", base + base->property);
+    	if(base->page_link.next != &free_list && base + base->property == p){
+    		base->property += p->property;
+    		//cprintf("merge the next: %d\n", p->property);
+    		ClearPageProperty(p);
+    		list_del(&(p->page_link));
+    		//cprintf("now next flags = %d %d", base->flags, p->flags);
+    		re = 1;
+    	}
+    	p = le2page(base->page_link.prev, page_link);
+    	//cprintf("base = %08x p = %08x size = %d\n", base, p, base->property);
+    	if(base->page_link.prev != &free_list && p + p->property == base){
+    		p->property += base->property;
+    		//cprintf("merge the prev: %d\n", p->property);
+    		ClearPageProperty(base);
+    		list_del(&(base->page_link));
+    		//cprintf("now prev flags = %d %d\n",base->flags, p->flags);
+    		base = p;
+    		re = 1;
+    	}
     }
     nr_free += n;
-    list_add(&free_list, &(base->page_link));
 }
 
 static size_t
