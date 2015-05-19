@@ -36,6 +36,7 @@ fd_array_init(struct file *fd_array) {
 static int
 fd_array_alloc(int fd, struct file **file_store) {
 //    panic("debug");
+	cprintf("function:fd_array_alloc\n");
     struct file *file = get_fd_array();
     if (fd == NO_FD) {
         for (fd = 0; fd < FILES_STRUCT_NENTRY; fd ++, file ++) {
@@ -155,6 +156,7 @@ file_testfd(int fd, bool readable, bool writable) {
 // open file
 int
 file_open(char *path, uint32_t open_flags) {
+	cprintf("file open!\n");
     bool readable = 0, writable = 0;
     switch (open_flags & O_ACCMODE) {
     case O_RDONLY: readable = 1; break;

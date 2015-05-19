@@ -88,6 +88,7 @@ sys_sleep(uint32_t arg[]) {
 
 static int
 sys_open(uint32_t arg[]) {
+	cprintf("call function:sys_open!\n");
     const char *path = (const char *)arg[0];
     uint32_t open_flags = (uint32_t)arg[1];
     return sysfile_open(path, open_flags);
@@ -186,6 +187,7 @@ static int (*syscalls[])(uint32_t arg[]) = {
 
 void
 syscall(void) {
+	//cprintf("syscall!\n");
     struct trapframe *tf = current->tf;
     uint32_t arg[5];
     int num = tf->tf_regs.reg_eax;

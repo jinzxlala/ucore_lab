@@ -384,17 +384,19 @@ get_pte(pde_t *pgdir, uintptr_t la, bool create) {
      *   PTE_W           0x002                   // page table/directory entry flags bit : Writeable
      *   PTE_U           0x004                   // page table/directory entry flags bit : User can access
      */
-#if 0
-    pde_t *pdep = NULL;   // (1) find page directory entry
-    if (0) {              // (2) check if entry is not present
-                          // (3) check if creating is needed, then alloc page for page table
+#if 1
+    pde_t *pdep = pgdir + PDX(la);   // (1) find page directory entry
+    if ((*pdep & PTE_P) == 0) {              // (2) check if entry is not present
+    	if(create == 0) return NULL;
+    	struct Page *page = alloc_page();// (3) check if creating is needed, then alloc page for page table
                           // CAUTION: this page is used for page table, not for common data page
-                          // (4) set page reference
-        uintptr_t pa = 0; // (5) get linear address of page
-                          // (6) clear page content using memset
-                          // (7) set page directory entry's permission
+    	if(page == NULL) return NULL;
+    	set_page_ref(page, 1);// (4) set page reference
+        uintptr_t pa = page2pa(page); // (5) get linear address of page
+        memset(KADDR(pa), 0, PGSIZE);// (6) clear page content using memset
+        *pdep = pa | PTE_P | PTE_W | PTE_U;// (7) set page directory entry's permission
     }
-    return NULL;          // (8) return page table entry
+    return (pte_t*)KADDR(PDE_ADDR(*pdep)) + PTX(la);          // (8) return page table entry
 #endif
 }
 
@@ -406,7 +408,7 @@ get_page(pde_t *pgdir, uintptr_t la, pte_t **ptep_store) {
         *ptep_store = ptep;
     }
     if (ptep != NULL && *ptep & PTE_P) {
-        return pa2page(*ptep);
+        return pte2page(*ptep);
     }
     return NULL;
 }
@@ -432,13 +434,13 @@ page_remove_pte(pde_t *pgdir, uintptr_t la, pte_t *ptep) {
      * DEFINEs:
      *   PTE_P           0x001                   // page table/directory entry flags bit : Present
      */
-#if 0
-    if (0) {                      //(1) check if this page table entry is present
-        struct Page *page = NULL; //(2) find corresponding page to pte
-                                  //(3) decrease page reference
-                                  //(4) and free this page when page reference reachs 0
-                                  //(5) clear second page table entry
-                                  //(6) flush tlb
+#if 1
+    if ((*ptep & PTE_P) == 1) {                      //(1) check if this page table entry is present
+        struct Page *page = pte2page(*ptep); //(2) find corresponding page to pte
+        page_ref_dec(page);//(3) decrease page reference
+        if(page->ref == 0) free_page(page);//(4) and free this page when page reference reachs 0
+        *ptep = 0;//(5) clear second page table entry
+        tlb_invalidate(pgdir, la);//(6) flush tlb
     }
 #endif
 }
@@ -522,6 +524,10 @@ copy_range(pde_t *to, pde_t *from, uintptr_t start, uintptr_t end, bool share) {
          * (3) memory copy from src_kvaddr to dst_kvaddr, size is PGSIZE
          * (4) build the map of phy addr of  nage with the linear addr start
          */
+        void *src_kvaddr = page2kva(page);
+        void *dst_kvaddr = page2kva(npage);
+        memcpy(dst_kvaddr, src_kvaddr, PGSIZE);
+        page_insert(to, npage, start, perm);
         assert(ret == 0);
         }
         start += PGSIZE;
@@ -625,7 +631,7 @@ check_pgdir(void) {
 
     pte_t *ptep;
     assert((ptep = get_pte(boot_pgdir, 0x0, 0)) != NULL);
-    assert(pa2page(*ptep) == p1);
+    assert(pte2page(*ptep) == p1);
     assert(page_ref(p1) == 1);
 
     ptep = &((pte_t *)KADDR(PDE_ADDR(boot_pgdir[0])))[1];
@@ -643,7 +649,7 @@ check_pgdir(void) {
     assert(page_ref(p1) == 2);
     assert(page_ref(p2) == 0);
     assert((ptep = get_pte(boot_pgdir, PGSIZE, 0)) != NULL);
-    assert(pa2page(*ptep) == p1);
+    assert(pte2page(*ptep) == p1);
     assert((*ptep & PTE_U) == 0);
 
     page_remove(boot_pgdir, 0x0);
@@ -654,8 +660,8 @@ check_pgdir(void) {
     assert(page_ref(p1) == 0);
     assert(page_ref(p2) == 0);
 
-    assert(page_ref(pa2page(boot_pgdir[0])) == 1);
-    free_page(pa2page(boot_pgdir[0]));
+    assert(page_ref(pde2page(boot_pgdir[0])) == 1);
+    free_page(pde2page(boot_pgdir[0]));
     boot_pgdir[0] = 0;
 
     cprintf("check_pgdir() succeeded!\n");
@@ -689,7 +695,7 @@ check_boot_pgdir(void) {
     assert(strlen((const char *)0x100) == 0);
 
     free_page(p);
-    free_page(pa2page(PDE_ADDR(boot_pgdir[0])));
+    free_page(pde2page(boot_pgdir[0]));
     boot_pgdir[0] = 0;
 
     cprintf("check_boot_pgdir() succeeded!\n");

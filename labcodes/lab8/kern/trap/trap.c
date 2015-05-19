@@ -57,6 +57,17 @@ idt_init(void) {
      /* LAB5 YOUR CODE */ 
      //you should update your lab1 code (just add ONE or TWO lines of code), let user app to use syscall to get the service of ucore
      //so you should setup the syscall interrupt gate in here
+	extern uintptr_t __vectors[];
+	int i;
+	for(i = 0; i < sizeof(idt)/sizeof(struct gatedesc); i++){
+		if(i == T_SYSCALL){
+			SETGATE(idt[i], 1, GD_KTEXT, __vectors[i], DPL_USER);
+		}
+		else{
+			SETGATE(idt[i], 1, GD_KTEXT, __vectors[i], DPL_KERNEL);
+		}
+	}
+	lidt(&idt_pd);
 }
 
 static const char *
@@ -225,13 +236,18 @@ trap_dispatch(struct trapframe *tf) {
          *    Every TICK_NUM cycle, you should set current process's current->need_resched = 1
          */
         /* LAB6 YOUR CODE */
-        /* IMPORTANT FUNCTIONS:
+        /* you should upate you lab5 code
+         * IMPORTANT FUNCTIONS:
+	     * sched_class_proc_tick
+         */         
+        /* LAB7 YOUR CODE */
+        /* you should upate you lab6 code
+         * IMPORTANT FUNCTIONS:
 	     * run_timer_list
-	     *----------------------
-	     * you should update your lab5 code (just add ONE or TWO lines of code):
-         *    Every tick, you should update the system time, iterate the timers, and trigger the timers which are end to call scheduler.
-         *    You can use one funcitons to finish all these things.
          */
+		++ticks;
+		assert(current != NULL);
+		run_timer_list();
         break;
     case IRQ_OFFSET + IRQ_COM1:
     case IRQ_OFFSET + IRQ_KBD:
