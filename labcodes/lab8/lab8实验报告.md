@@ -1,0 +1,26 @@
+#lab8实验报告
+##靳子翔 2012011365
+
+##练习一 完成读文件操作的实现
+实现思路：
+1.根据注释的提示，首先判断第一个块的偏移，如果不为0,那么先对这一部分进行读写操作。通过调用函数sfs_bmap_load_nolock来通过文件块相对偏移计算其绝对偏移，然后调用sfs_buf_op来根据绝对偏移和size大小对buf进行操作。
+2.对整块文件进行操作，依旧是调用sfs_bmap_load_nolock计算文件块的绝对偏移。然后调用sfs_block_op来进行操作直到nblks为0.
+3.判断第一个块是否是对齐的。如果不对齐，则先计算绝对偏移，再调用sfs_buf_op来对buf进行操作。
+练习中问题回答：
+一个管道实际上是一个只存在于内存的文件。构造一个pipe结构体和pipe_block结构体，定义函数pipe_read和pipe_write来操作读写。
+
+实现pipe_read时，首先获取互斥锁，然后循环读入数据。如果pipe_block为空，那么将其放在等待队列上。如果不为空，那么唤醒一个等待的写入进程。数据读入完成后退出循环，释放互斥锁。
+
+实现pipe_write与pipe_read相似。
+
+##练习二 完成基于文件系统的执行程序机制的实现
+实现思路：
+0.更新proc.c中的alloc_proc函数，加入一个filesp，初始化为NULL。在do_fork中加入copy_files过程。
+1.修改load_icode函数，其与之前不同部分为，在建立页表项之后，调用load_icode_read将elfhdr读入内存，文件描述符为fd。在这之后，判断magic时候正确。若正确，那么根据elfhdr读入proghdr，并判断其格式。调用mm_map建立其到虚拟内存的映射。调用pgdir_alloc_page为TEXT段分配页，并且将内容拷贝过来，为BBS段分配页。之后关闭文件描述符fd,调用mm_map建立用户栈将参数压入。
+与答案的不同：在do_fork中我没有使用答案中的copy_fs函数而是使用copy_files函数，另外其失败后返回的是bad_fork_cleanup_fs而不是bad_fork_cleanup_proc。
+练习中问题回答：
+实现硬链接：在系统调用中新建一个file，它拥有和链接文件相同的权限，但是inode指向的是链接文件的inode。之后每次有文件指向它，inode的引用计数加1，当引用计数为0时删除inode。
+实现软链接：新建一个file，该file有自己的inode，但是inode的内容是一个指向链接file的指针。
+
+##重要但是没有体现的知识点
+空闲空间管理和RAID的相关内容。

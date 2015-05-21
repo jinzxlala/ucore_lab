@@ -3364,3 +3364,12 @@ org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse
 
 !ENTRY org.eclipse.cdt.core 1 0 2015-05-17 17:28:34.508
 !MESSAGE Indexed 'lab8_result' (84 sources, 57 headers) in 1.98 sec: 5,063 declarations; 19,388 references; 8 unresolved inclusions; 0 syntax errors; 194 unresolved names (0.79%)
+!SESSION 2015-05-21 10:58:43.570 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-05-21 10:58:46.713
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
