@@ -16,8 +16,11 @@
 ##练习二 完成基于文件系统的执行程序机制的实现
 实现思路：
 0.更新proc.c中的alloc_proc函数，加入一个filesp，初始化为NULL。在do_fork中加入copy_files过程。
+
 1.修改load_icode函数，其与之前不同部分为，在建立页表项之后，调用load_icode_read将elfhdr读入内存，文件描述符为fd。在这之后，判断magic时候正确。若正确，那么根据elfhdr读入proghdr，并判断其格式。调用mm_map建立其到虚拟内存的映射。调用pgdir_alloc_page为TEXT段分配页，并且将内容拷贝过来，为BBS段分配页。之后关闭文件描述符fd,调用mm_map建立用户栈将参数压入。
+
 与答案的不同：在do_fork中我没有使用答案中的copy_fs函数而是使用copy_files函数，另外其失败后返回的是bad_fork_cleanup_fs而不是bad_fork_cleanup_proc。
+
 练习中问题回答：
 实现硬链接：在系统调用中新建一个file，它拥有和链接文件相同的权限，但是inode指向的是链接文件的inode。之后每次有文件指向它，inode的引用计数加1，当引用计数为0时删除inode。
 实现软链接：新建一个file，该file有自己的inode，但是inode的内容是一个指向链接file的指针。
